@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# After automatic login, lock screen
+dm-tool switch-to-greeter
