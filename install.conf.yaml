@@ -6,9 +6,10 @@
 - clean: ['~']
 
 - link:
+    ~/.bash_profile:
     ~/.dotfiles: ''
-    ~/.vimrc:
     ~/.ssh/config: ssh
+    ~/.vimrc:
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
