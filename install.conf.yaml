@@ -1,0 +1,14 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.vimrc:
+    ~/.ssh/config: ssh
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
