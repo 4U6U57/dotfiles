@@ -1,7 +1,14 @@
 case $HOSTNAME in
-  (VALERAPCWK) PS1_color=36;;
-  (unix*.lt.ucsc.edu) PS1_color=33;;
-  (default) PS1_color=00;;
+  (unix*.lt.ucsc.edu)
+    PS1_color=33;; # Yellow
+  (VALERAPCWK)
+    PS1_color=35;; # Magenta
+  (YOLOSWAG)
+    PS1_color=34;; # Blue
+  (YOLOSWAGGER)
+    PS1_color=36;; # Cyan
+  (default)
+    PS1_color=00;; # Default
 esac
 PS1_str="${debian_chroot:+($debian_chroot)}"
 PS1_str="$PS1_str[\[\033[01;"$PS1_color"m\]\u@\h.nsa.gov\[\033[00m\]"
