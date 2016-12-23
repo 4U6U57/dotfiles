@@ -22,4 +22,4 @@
 # m h  dom mon dow   command
 
 @hourly ~/bin/duck.sh
-@daily ~/.dotfiles/install
+@reboot ~/.dotfiles/install
