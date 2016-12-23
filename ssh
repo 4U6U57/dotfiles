@@ -1,9 +1,15 @@
-Host ucsc
-   HostName unix.ucsc.edu
-   User avalera
-Host home
-   HostName 4U6U57.duckdns.org
-   User avalera
 Host github
-   HostName github.com
-   User git
+    HostName github.com
+    User git
+Host home
+    HostName 4U6U57.duckdns.org
+    User avalera
+Host swag
+    HostName YOLOSWAG.duckdns.org
+    User avalera
+Host swagger
+    HostName YOLOSWAGGER.duckdns.org
+    User avalera
+Host ucsc
+    HostName unix.ucsc.edu
+    User avalera

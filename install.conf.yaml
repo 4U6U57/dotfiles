@@ -8,7 +8,10 @@
   - '.ssh'
 
 - link:
+    ~/bin/duck.sh:
     ~/.bash_profile:
+    ~/.bashrc:
+    ~/.crontab:
     ~/.dotfiles: ''
     ~/.ssh/config: ssh
     ~/.vimrc:
@@ -16,3 +19,4 @@
 - shell:
   - [git pull origin master, Updating repo]
   - [git submodule update --init --recursive, Installing submodules]
+  - [crontab ~/.crontab, Configuring crontab]
