@@ -3,7 +3,7 @@ Host ucsc
    User avalera
 Host home
    HostName 4U6U57.duckdns.org
-   User august
+   User avalera
 Host github
    HostName github.com
    User git
