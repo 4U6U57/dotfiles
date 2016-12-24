@@ -1,5 +1,12 @@
-" vimrc: Vim preferences
+" vimrc: Vim preference file
 " August Valera <avalera@ucsc.edu>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" README
+" This vimrc is part of the 4U6U57/dotfiles project
+" It can be independently updated by either of the following within Vim:
+" Running VimrcUpdate, pressing <F12> in Normal mode
+" For more information, see https://github.com/4U6U57/dotfiles
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN IMPORTS
@@ -23,6 +30,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
+Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
