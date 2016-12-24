@@ -6,13 +6,16 @@
 - clean: 
   - '~'
   - '.ssh'
+  - 'bin'
 
 - link:
+    ~/bin/crontab-edit.sh:
     ~/bin/duck.sh:
     ~/.bash_profile:
     ~/.bashrc:
     ~/.crontab:
     ~/.dotfiles: ''
+    ~/.gitconfig:
     ~/.ssh/config: ssh
     ~/.vimrc:
 

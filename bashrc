@@ -17,6 +17,7 @@ export PS1=$PS1_str
 
 PATH=$PATH:~/bin
 PATH=$PATH:.
+PATH=$PATH:/sbin
 
 export VISUAL="vim"
 export EDITOR="vim"
