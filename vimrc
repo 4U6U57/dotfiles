@@ -8,7 +8,8 @@
 " Plugins for Vim
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-  \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com
+        \/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugUpdate | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
@@ -24,7 +25,6 @@ Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-sensible'
 call plug#end()
-map <F12> :PlugUpdate<CR>q!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL PREFERENCES
@@ -80,6 +80,19 @@ map <PageDown> <C-D>
 " Autoformat
 map <F3> <Esc>:Autoformat<CR>i
 imap <F3> <Esc><F3>
+
+" Update Vimrc
+function VimrcUpdater()
+  if empty(glob('~/.dotfiles'))
+    silent !curl -fLo ~/.vimrc --create-dirs
+          \ https://raw.githubusercontent.com
+          \/4U6U57/dotfiles/master/vimrc
+  endif
+  PlugUpdate
+  :q!
+endfunction
+command VimrcUpdate call VimrcUpdater()
+map <F12> :VimrcUpdate<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN PREFERENCES
