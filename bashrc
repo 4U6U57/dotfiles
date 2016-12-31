@@ -15,9 +15,9 @@ PS1_str="$PS1_str[\[\033[01;"$PS1_color"m\]\u@\h.nsa.gov\[\033[00m\]"
 PS1_str="$PS1_str \[\033[01;34m\]\W\[\033[00m\]]\$ "
 export PS1=$PS1_str
 
-PATH=$PATH:~/bin
-PATH=$PATH:.
-PATH=$PATH:/sbin
+export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:."
+export PATH="$PATH:$HOME/sbin"
 
 export VISUAL="vim"
 export EDITOR="vim"
@@ -25,4 +25,9 @@ export EDITOR="vim"
 alias less="less --RAW-CONTROL-CHARS"
 alias ls="ls --color=auto"
 
-crontab ~/.crontab
+# Ruby for Jekyll
+if [[ $HOSTNAME == "YOLOSWAG" ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+fi
