@@ -1,4 +1,7 @@
 #!/bin/bash
+# crontab.sh: part of the 4U6U57/dotfiles project
+# Editor and installer for the .crontab file
+# Emulates `crontab -e`, but maintains consistency with .crontab
 
 CRONFILE=~/.crontab
 SWAPFILE=~/.crontab.swp

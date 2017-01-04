@@ -1,4 +1,9 @@
-# EditorConfig is awesome: http://EditorConfig.org
+# editorconfig: part of the 4U6U57/dotfiles project
+# Root file for setting editor configurations for various file types
+# Check out http://EditorConfig.org for documentation
+# TODO: If you modify this file to suit your own needs, you MUST modify
+# the following line or the VimrcUpdate script will revert your changes
+# OVERWRITE: true
 
 # top-most EditorConfig file
 root = true

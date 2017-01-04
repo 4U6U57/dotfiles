@@ -1,11 +1,17 @@
-" vimrc: Vim preference file
-" August Valera <avalera@ucsc.edu>
+" vimrc: part of the 4U6U57/dotfiles project
+" A configuration file for the Vim text editor
+" Sets vim preferences and imports various plugins I find useful
+" Note some preferences are externalized to the file ~/.editorconfig
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" README
-" This vimrc is part of the 4U6U57/dotfiles project
-" It can be independently updated by either of the following within Vim:
-" Running VimrcUpdate, pressing <F12> in Normal mode
+" INSTALLATION/UPDATING
+
+" Vimrc is maintained through 4U6U57/dotfiles, and can be updated by:
+" running :VimrcUpdate or by pressing <F12> in Normal mode
+" TODO: If you modify this file to suit your own needs, you MUST modify
+" the following line or the VimrcUpdate script will revert your changes
+" OVERWRITE: true
+"
 " For more information, see https://github.com/4U6U57/dotfiles
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,7 +105,8 @@ imap <F3> <Esc><F3>
 
 " Update Vimrc
 function! VimrcUpdater()
-  if empty(glob('~/.dotfiles'))
+  if empty(glob('~/.dotfiles')) && 
+        \ match(readfile('~/.vimrc'),'OVERWRITE: true')
     silent !curl -fLo ~/.vimrc --create-dirs
           \ https://raw.githubusercontent.com
           \/4U6U57/dotfiles/master/vimrc
@@ -109,7 +116,9 @@ function! VimrcUpdater()
   endif
   if empty(glob('~/.editorconfig')) || empty(glob('~/.dotfiles')) &&
         \ (filereadable('~/.editorconfig') &&
-        \ match(readfile('~/.editorconfig'),'4U6U57/dotfiles'))
+        \ match(readfile('~/.editorconfig'),
+        \'part of the 4U6U57/dotfiles project') &&
+        \ match(readfile('~/.editorconfig'),'OVERWRITE: true'))
     !curl -fLo ~/.editorconfig --create-dirs
           \ https://raw.githubusercontent.com
           \/4U6U57/dotfiles/master/editorconfig

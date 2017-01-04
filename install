@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
+# install: part of the 4U6U57/dotfiles project
+# INSTALL: Run this script to install this repo
+# Installer script for the dotfiles repo, calls the dotbot utility
+# Based off of anishathalye/dotbot
 
 set -e
 

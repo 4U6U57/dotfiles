@@ -1,3 +1,8 @@
+# gitconfig: part of the 4U6U57/dotfiles project
+# Git file for setting git configuration settings
+# TODO: IMPORTANT! Modify the name/email fields to match your own info
+# Otherwise all your commits will be attributed to me!
+
 [user]
 	name = August Valera
 	email = 4U6U57@gmail.com

@@ -1,10 +1,12 @@
 #!/bin/bash
-
-# Bash prompt customizer
+# bash_prompt: part of the 4U6U57/dotfiles project
+# A subset of the bashrc configuration for setting the PS1 prompt
 # Based off of mathiasbynens/dotfiles
+# TODO: Edit the prompt_host_style() and prompt_init() to customize
+# INSTALL: add `source ~/.bash_prompt` or equivalent in .bashrc
 
 prompt_host_style() {
-  # Customize host color below
+  # TODO: Modify these hosts to customize colors for your own computers
   case $HOSTNAME in
     (unix*.lt.ucsc.edu)
       hostStyle=${yellow};;
@@ -17,6 +19,30 @@ prompt_host_style() {
     (*)
       hostStyle=${reset};;
   esac
+  # If local machine, show USER @ HOST, else if ssh show USER > HOST
+  hostType="@"
+  if [[ "${SSH_TTY}" ]]; then
+    hostStyle="${bold}${hostStyle}";
+    hostType=">";
+  fi;
+}
+
+prompt_init() {
+  # TODO: Modify the PS1/2 strings to customize how your prompt looks
+  PS1="\[\033]0;\W\007\]"; # working directory base name
+  PS1+="\[${bold}\]\n"; # newline
+  PS1+="\[${userStyle}\]\u"; # username
+  PS1+="\[${white}\] ${hostType} ";
+  PS1+="\[${hostStyle}\]\h"; # host
+  PS1+="\[${white}\] : ";
+  PS1+="\[${green}\]\w"; # working directory full path
+  PS1+="\$(prompt_git \"\[${white}\] < \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
+  PS1+="\n";
+  PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
+  export PS1;
+
+  PS2="\[${yellow}\]→ \[${reset}\]";
+  export PS2;
 }
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
@@ -112,26 +138,8 @@ else
   userStyle="${orange}";
 fi;
 
-# Highlight the hostname when connected via SSH.
+# Style the host
 prompt_host_style;
-hostType="@"
-if [[ "${SSH_TTY}" ]]; then
-  hostStyle="${bold}${hostStyle}";
-  hostType=">"
-fi;
 
-# Set the terminal title and prompt.
-PS1="\[\033]0;\W\007\]"; # working directory base name
-PS1+="\[${bold}\]\n"; # newline
-PS1+="\[${userStyle}\]\u"; # username
-PS1+="\[${white}\] ${hostType} ";
-PS1+="\[${hostStyle}\]\h"; # host
-PS1+="\[${white}\] : ";
-PS1+="\[${green}\]\w"; # working directory full path
-PS1+="\$(prompt_git \"\[${white}\] < \[${violet}\]\" \"\[${blue}\]\")"; # Git repository details
-PS1+="\n";
-PS1+="\[${white}\]\$ \[${reset}\]"; # `$` (and reset color)
-export PS1;
-
-PS2="\[${yellow}\]→ \[${reset}\]";
-export PS2;
+# Generate prompt
+prompt_init;

@@ -23,7 +23,7 @@
     ~/.dotfiles: ''
     ~/.editorconfig:
     ~/.gitconfig:
-    ~/.ssh/config: ssh
+    ~/.ssh/config: sshconfig
     ~/.vimrc:
 
 - shell:
