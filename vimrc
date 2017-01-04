@@ -21,6 +21,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
 Plug 'yggdroot/indentline'
 Plug 'bling/vim-airline'
@@ -58,7 +59,7 @@ set magic
 " Use spaces instead of tabs, smart tabbing
 set expandtab
 set smarttab
-set shiftwidth=2
+" set shiftwidth=2
 set tabstop=2
 
 " Color scheme

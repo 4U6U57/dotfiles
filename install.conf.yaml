@@ -15,6 +15,7 @@
     ~/.bashrc:
     ~/.crontab:
     ~/.dotfiles: ''
+    ~/.editorconfig:
     ~/.gitconfig:
     ~/.ssh/config: ssh
     ~/.vimrc:
