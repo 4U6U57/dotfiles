@@ -1,7 +1,7 @@
 # dotfiles
 
-[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://img.shields.io/gitter/room/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Huboard Scrum Board](https://img.shields.io/github/issues/4U6U57/dotfiles.svg?label=Huboard)](https://huboard.com/4U6U57/dotfiles)
+[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://badges.gitter.im/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Check the scrum board at waffle.io](https://badge.waffle.io/4U6U57/dotfiles.svg?label=ready&title=waffle%20scrum%20board)](http://waffle.io/4U6U57/dotfiles)
 
 My personal preference files "dotfiles" for Linux. Feel free to look
 around, and fork it if you want.
@@ -39,11 +39,11 @@ comments.
 - [dotbot](https://github.com/anishathalye/dotbot): Dotfile installer
 - [editorconfig](https://editorconfig.org): Text editor preferences
 - [junegunn/vim-plug](https://github.com/junegunn/vim-plug): Vim plugin manager
-- Various other Vim plugins, listed in detail in the [vimrc](vimrc) file
+    - Various other Vim plugins, listed in detail in the [vimrc](vimrc) file
 
 ## Feedback and Other Questions
 
 I am always looking for ways to streamline my process and make my config
 even better. Free free to drop by our Gitter chat room (linked above)
-for any questions/suggestions. You can also post an GitHub issue for 
+for any questions/suggestions. You can also post a GitHub issue for 
 specific bugs.
