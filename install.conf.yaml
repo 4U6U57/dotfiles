@@ -1,3 +1,7 @@
+# Config file for dotbot
+# August Valera (@4U6U57)
+# Run ./install to run dotbot
+
 - defaults:
     link:
       create: true
@@ -5,12 +9,12 @@
 
 - clean: 
   - '~'
-  - '.ssh'
-  - 'bin'
+  - '~/.ssh'
+  - '~/bin'
 
 - link:
-    ~/bin/crontab-edit.sh:
-    ~/bin/duck.sh:
+    ~/bin/crontab-edit: crontab-edit.sh
+    ~/bin/duck: duck.sh
     ~/.bash_profile:
     ~/.bashrc:
     ~/.crontab:
