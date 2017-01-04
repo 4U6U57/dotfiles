@@ -1,4 +1,6 @@
 # dotfiles
+
+[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://badges.gitter.im/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 My personal preference files "dotfiles" for Linux. Feel free to look
 around, and fork it if you want.
 
