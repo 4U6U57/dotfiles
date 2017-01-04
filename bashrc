@@ -43,7 +43,7 @@ if [[ $Jekyll -eq 1 ]]; then
 fi
 
 # Cub Linux specific
-if [[ $CubLinux -eq 1 ]]; then
+if [[ $HOSTNAME == "YOLOSWAGGER" ]]; then
   # Enable Natural (reversed/macOS style) scrolling on touchpad
   synclient VertScrollDelta=-111 HorizScrollDelta=-111
   # Lower start brightness
