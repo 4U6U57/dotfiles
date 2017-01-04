@@ -18,6 +18,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com
         \/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugUpdate | source $MYVIMRC
+  !echo [vimrc] This is your first time running vim after installing 
+        \ 4U6U57/dotfiles's vimrc. As soon as it\'s done installing, I
+        \ highly suggest you run the Vim command :VimrcUpdate to make
+        \ sure all dependencies are installed. This is also the way to
+        \ update it when future versions of the plugins are released.
+        \ Also, please ignore the following errors, they are 
+        \ expected and unavoidable. Have fun with your new Vim\!
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
@@ -91,16 +98,29 @@ map <F3> <Esc>:Autoformat<CR>i
 imap <F3> <Esc><F3>
 
 " Update Vimrc
-function VimrcUpdater()
+function! VimrcUpdater()
   if empty(glob('~/.dotfiles'))
     silent !curl -fLo ~/.vimrc --create-dirs
           \ https://raw.githubusercontent.com
           \/4U6U57/dotfiles/master/vimrc
+          \ && echo "[vimrc] updated by curl"
+  else
+    !echo "[vimrc] ignored: update with dotfiles"
+  endif
+  if empty(glob('~/.editorconfig')) || empty(glob('~/.dotfiles')) &&
+        \ (filereadable('~/.editorconfig') &&
+        \ match(readfile('~/.editorconfig'),'4U6U57/dotfiles'))
+    !curl -fLo ~/.editorconfig --create-dirs
+          \ https://raw.githubusercontent.com
+          \/4U6U57/dotfiles/master/editorconfig
+          \ && echo "[editorconfig] updated by curl"
+  else
+    !echo "[editorconfig] ignored: to keep edits"
   endif
   PlugUpdate
   :q!
 endfunction
-command VimrcUpdate call VimrcUpdater()
+command! VimrcUpdate call VimrcUpdater()
 map <F12> :VimrcUpdate<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
