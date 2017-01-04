@@ -27,6 +27,5 @@
     ~/.vimrc:
 
 - shell:
-  - [git pull origin master, Updating repo]
   - [git submodule update --init --recursive, Installing submodules]
   - [crontab ~/.crontab, Configuring crontab]

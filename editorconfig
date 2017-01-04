@@ -12,3 +12,6 @@ indent_size = 2
 
 [{Makefile,makefile,*.mk}]
 indent_style = tab
+
+[*.md]
+indent_size = 4
