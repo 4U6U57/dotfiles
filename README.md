@@ -1,7 +1,7 @@
 # dotfiles
 
-[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/4U6U57/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Huboard Scrum Board](https://img.shields.io/github/issues/badges/shields.svg?label=Huboard)](https://huboard.com/4U6U57/dotfiles)
+[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://img.shields.io/gitter/room/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Huboard Scrum Board](https://img.shields.io/github/issues/4U6U57/dotfiles.svg?label=Huboard)](https://huboard.com/4U6U57/dotfiles)
 
 My personal preference files "dotfiles" for Linux. Feel free to look
 around, and fork it if you want.
