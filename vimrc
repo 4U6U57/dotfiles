@@ -1,9 +1,9 @@
-" vimrc: part of the 4U6U57/dotfiles project
+" vimoc: part of the 4U6U57/dotfiles project
 " A configuration file for the Vim text editor
 " Sets vim preferences and imports various plugins I find useful
 " Note some preferences are externalized to the file ~/.editorconfig
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " INSTALLATION/UPDATING
 
 " Vimrc is maintained through 4U6U57/dotfiles, and can be updated by:
@@ -14,7 +14,7 @@
 "
 " For more information, see https://github.com/4U6U57/dotfiles
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN IMPORTS
 
 " junegunn/vim-plug
@@ -24,12 +24,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com
         \/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugUpdate | source $MYVIMRC
-  !echo [vimrc] This is your first time running vim after installing 
+  !echo [vimrc] This is your first time running vim after installing
         \ 4U6U57/dotfiles's vimrc. As soon as it\'s done installing, I
         \ highly suggest you run the Vim command :VimrcUpdate to make
         \ sure all dependencies are installed. This is also the way to
         \ update it when future versions of the plugins are released.
-        \ Also, please ignore the following errors, they are 
+        \ Also, please ignore the following errors, they are
         \ expected and unavoidable. Have fun with your new Vim\!
 endif
 call plug#begin('~/.vim/plugged')
@@ -48,7 +48,8 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " GENERAL PREFERENCES
 
 " Syntax color-coding
@@ -84,10 +85,7 @@ set term=xterm-256color
 " Line numbers
 set number
 
-" Over 72 alert
-match ErrorMsg '\%>72v.\+'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEYBINDINGS
 
 " Mouse
@@ -105,7 +103,7 @@ imap <F3> <Esc><F3>
 
 " Update Vimrc
 function! VimrcUpdater()
-  if empty(glob('~/.dotfiles')) && 
+  if empty(glob('~/.dotfiles')) &&
         \ match(readfile('~/.vimrc'),'OVERWRITE: true')
     silent !curl -fLo ~/.vimrc --create-dirs
           \ https://raw.githubusercontent.com
@@ -132,7 +130,7 @@ endfunction
 command! VimrcUpdate call VimrcUpdater()
 map <F12> :VimrcUpdate<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN PREFERENCES
 
 " vim-airline
@@ -142,6 +140,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 colorscheme solarized
+
+" vim-editorconfig
+let g:EditorConfig_max_line_indicator = "fill"
 
 " vim-gitgutter
 let g:gitgutter_realtime = 1
