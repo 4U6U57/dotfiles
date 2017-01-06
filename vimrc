@@ -146,3 +146,6 @@ let g:EditorConfig_max_line_indicator = "fill"
 
 " vim-gitgutter
 let g:gitgutter_realtime = 1
+
+" indentline
+let g:indentLine_color_term = 236

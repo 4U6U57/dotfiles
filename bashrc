@@ -66,6 +66,10 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# Bash autocompletion 
+shopt -s cdspell # Autocorrect filenames
+shopt -s nocaseglob # Case insensitive autocorrect
+
 # The following is highly specific to my own personal use
 custom_user_config() {
   # Ruby for Jekyll
