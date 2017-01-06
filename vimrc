@@ -38,10 +38,12 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
 Plug 'yggdroot/indentline'
 Plug 'ervandew/supertab'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'bling/vim-airline'
 Plug 'chiel92/vim-autoformat'
 Plug 'conradirwin/vim-bracketed-paste'
 Plug 'altercation/vim-colors-solarized'
+Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
@@ -143,7 +145,7 @@ let g:solarized_contrast="high"
 colorscheme solarized
 
 " vim-editorconfig
-let g:EditorConfig_max_line_indicator = "fill"
+" let g:EditorConfig_max_line_indicator = "fill"
 
 " vim-gitgutter
 let g:gitgutter_realtime = 1
