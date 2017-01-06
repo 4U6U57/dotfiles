@@ -5,7 +5,7 @@
 # the following line or the VimrcUpdate script will revert your changes
 # OVERWRITE: true
 
-# top-most EditorConfig file
+# If this is not your ~ directory, delete the following line
 root = true
 
 # Unix-style newlines with a newline ending every file
