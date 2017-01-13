@@ -10,3 +10,17 @@ sourcer() {
 export -f sourcer
 
 sourcer ~/.bashrc
+
+custom_user_startup() {
+  # Cub Linux specific
+  if [[ $HOSTNAME == "YOLOSWAGGER" ]]; then
+    # Enable Natural (reversed/macOS style) scrolling on touchpad
+    synclient VertScrollDelta=-111 HorizScrollDelta=-111
+    # Lower start brightness
+    xbacklight -set 10
+    # Start slack client
+    if which slack >/dev/null 2>&1; then slack --startup; fi
+  fi
+
+}
+[[ $USER == "avalera" ]] && custom_user_startup

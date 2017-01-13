@@ -8,7 +8,7 @@
 prompt_host_style() {
   # TODO: Modify these hosts to customize colors for your own computers
   case $HOSTNAME in
-    (unix*.lt.ucsc.edu)
+    (*.lt.ucsc.edu)
       hostStyle=${yellow};;
     (VALERAPCWK)
       hostStyle=${purple};;

@@ -4,7 +4,7 @@
 # Emulates `crontab -e`, but maintains consistency with .crontab
 
 CRONFILE=~/.crontab
-SWAPFILE=~/.crontab.swp
+SWAPFILE=$(mktemp)
 
 crontab -l > $SWAPFILE
 if [[ -e $SWAPFILE ]] && ! diff $SWAPFILE $CRONFILE; then

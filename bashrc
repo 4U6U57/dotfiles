@@ -66,7 +66,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Bash autocompletion 
+# Bash autocompletion
 shopt -s cdspell # Autocorrect filenames
 shopt -s nocaseglob # Case insensitive autocorrect
 
@@ -77,16 +77,6 @@ custom_user_config() {
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
     export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-  fi
-
-  # Cub Linux specific
-  if [[ $HOSTNAME == "YOLOSWAGGER" ]]; then
-    # Enable Natural (reversed/macOS style) scrolling on touchpad
-    synclient VertScrollDelta=-111 HorizScrollDelta=-111
-    # Lower start brightness
-    xbacklight -set 10
-    # Start slack client
-    if which slack >/dev/null 2>&1; then slack --startup; fi
   fi
 }
 [[ $USER == "avalera" ]] && custom_user_config
