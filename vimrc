@@ -49,6 +49,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-latex/vim-latex'
 Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-sensible'
 call plug#end()
