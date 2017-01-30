@@ -37,3 +37,8 @@ Host swag
 Host swagger
     HostName YOLOSWAGGER.duckdns.org
     User avalera
+    Port 7924
+Host haha
+    HostName cruzikin.hopto.org
+    Port 62062
+    User august

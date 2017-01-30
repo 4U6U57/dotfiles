@@ -24,13 +24,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com
         \/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugUpdate | source $MYVIMRC
-  !echo [vimrc] This is your first time running vim after installing
-        \ 4U6U57/dotfiles's vimrc. As soon as it\'s done installing, I
-        \ highly suggest you run the Vim command :VimrcUpdate to make
-        \ sure all dependencies are installed. This is also the way to
-        \ update it when future versions of the plugins are released.
-        \ Also, please ignore the following errors, they are
-        \ expected and unavoidable. Have fun with your new Vim\!
+  !echo [vimrc] "This is your first time running vim after installing
+        \ 4U6U57/dotfiles's vimrc. As soon as it's done installing, I highly
+        \ suggest you run the Vim command :VimrcUpdate to make sure all the
+        \ dependencies were installed correctly. This is also the way to update
+        \ the vimrc file and imported plugins when future versions are released.
+        \ Also, please ignore the following errors, they are expected and
+        \ unavoidable. Have fun with your new Vim\!"
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'

@@ -21,7 +21,6 @@ indent_style = tab
 
 [*.md]
 indent_size = 4
-max_line_length = 0
 
 [*.sh]
 max_line_length = 0
