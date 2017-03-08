@@ -110,8 +110,8 @@ imap <F3> <Esc><F3>
 " Update Vimrc
 function! VimrcUpdater()
   if empty(glob('~/.dotfiles')) &&
-        \ match(readfile('~/.vimrc'),'OVERWRITE: true')
-    silent !curl -fLo ~/.vimrc --create-dirs
+        \ match(readfile('~/.vimrc'),'OVERWRITE:\s*true')
+    !curl -fLo ~/.vimrc --create-dirs
           \ https://raw.githubusercontent.com
           \/4U6U57/dotfiles/master/vimrc
           \ && echo "[vimrc] updated by curl"
@@ -122,7 +122,7 @@ function! VimrcUpdater()
         \ (filereadable('~/.editorconfig') &&
         \ match(readfile('~/.editorconfig'),
         \'part of the 4U6U57/dotfiles project') &&
-        \ match(readfile('~/.editorconfig'),'OVERWRITE: true'))
+        \ match(readfile('~/.editorconfig'),'OVERWRITE:\s*true'))
     !curl -fLo ~/.editorconfig --create-dirs
           \ https://raw.githubusercontent.com
           \/4U6U57/dotfiles/master/editorconfig
