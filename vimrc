@@ -34,6 +34,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
+Plug 'DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
 Plug 'othree/html5.vim'
