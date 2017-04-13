@@ -12,8 +12,10 @@ quack() {
   echo "Host $HOSTNAME has ipv6 addr $ipv6"
 
   case $HOSTNAME in
+    (VALERALTHM)
+      domains="ucsc";;
     (VALERAPCWK)
-      domains="4U6U57 unsc";;
+      domains="4U6U57";;
     (YOLOSWAGGER)
       domains="YOLOSWAGGER";;
     (YOLOSWAG)
