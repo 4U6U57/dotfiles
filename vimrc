@@ -34,6 +34,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
+Plug 'chrisbra/csv.vim'
 Plug 'DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
@@ -80,8 +81,8 @@ set hlsearch
 set magic
 
 " Use spaces instead of tabs, smart tabbing
-set expandtab
-set smarttab
+"set expandtab
+"set smarttab
 " set shiftwidth=2
 set tabstop=2
 
@@ -93,6 +94,9 @@ set term=xterm-256color
 
 " Line numbers
 set number
+
+" Sets hotdogs
+set listchars=tab:>-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEYBINDINGS
@@ -141,6 +145,9 @@ map <F12> :VimrcUpdate<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN PREFERENCES
+
+" csv
+let g:csv_autocmd_arrange = 1
 
 " nerdtree
 autocmd StdinReadPre * let s:std_in=1
