@@ -20,9 +20,6 @@ custom_user_startup() {
     xbacklight -set 10
     # Start slack client
     if which slack >/dev/null 2>&1; then slack --startup; fi
-  elif
-    [[ $HOSTNAME == "VALERALTHM" ]]; then
-    xflock4
   fi
 }
 [[ $USER == "avalera" ]] && custom_user_startup
