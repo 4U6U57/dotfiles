@@ -18,8 +18,12 @@
 # list of available options, their meanings and defaults, please see the
 # ssh_config(5) man page.
 
+# Git
 Host github
     HostName github.com
+    User git
+Host gitlab
+    HostName gitlab.com
     User git
 
 # Possibly useful to you if you go to UCSC

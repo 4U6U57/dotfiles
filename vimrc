@@ -1,4 +1,4 @@
-" vimoc: part of the 4U6U57/dotfiles project
+" vimrc: part of the 4U6U57/dotfiles project
 " A configuration file for the Vim text editor
 " Sets vim preferences and imports various plugins I find useful
 " Note some preferences are externalized to the file ~/.editorconfig
@@ -35,7 +35,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'chrisbra/csv.vim'
-Plug 'DoxygenToolkit.vim'
+Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
 Plug 'othree/html5.vim'
@@ -56,6 +56,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-latex/vim-latex'
 Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-sensible'
+Plug 'dhruvasagar/vim-table-mode'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -173,3 +174,6 @@ let g:gitgutter_realtime = 1
 
 " indentline
 let g:indentLine_color_term = 236
+
+" table
+let g:table_mode_corner='|'
