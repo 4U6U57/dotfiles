@@ -21,6 +21,5 @@ custom_user_startup() {
     # Start slack client
     if which slack >/dev/null 2>&1; then slack --startup; fi
   fi
-
 }
 [[ $USER == "avalera" ]] && custom_user_startup

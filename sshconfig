@@ -36,6 +36,10 @@ Host home
     HostName 4U6U57.duckdns.org
     User avalera
     Port 7924
+Host print
+    HostName ucsc.duckdns.org
+    User avalera
+    Port 7924
 Host swag
     HostName YOLOSWAG.duckdns.org
     User avalera

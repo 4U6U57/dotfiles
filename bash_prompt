@@ -10,6 +10,8 @@ prompt_host_style() {
   case $HOSTNAME in
     (*.lt.ucsc.edu)
       hostStyle=${yellow};;
+    (VALERALTHM)
+      hostStyle=${violet};;
     (VALERAPCWK)
       hostStyle=${purple};;
     (YOLOSWAG)
