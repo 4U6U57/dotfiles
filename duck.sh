@@ -12,7 +12,7 @@ quack() {
   echo "Host $HOSTNAME has ipv6 addr $ipv6"
 
   case $HOSTNAME in
-    (VALERALTHM)
+    (4U6U57-RPW)
       domains="ucsc";;
     (VALERAPCWK)
       domains="4U6U57";;
@@ -20,7 +20,7 @@ quack() {
       domains="YOLOSWAGGER";;
     (YOLOSWAG)
       domains="YOLOSWAG";;
-    (default)
+    (*)
       domains="";;
   esac
 
@@ -35,4 +35,4 @@ quack() {
     echo
   done
 }
-[[ $USER == "avalera" ]] && quack
+[[ $USER == "avalera" || $USER == "pi" ]] && quack

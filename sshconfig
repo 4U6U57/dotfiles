@@ -18,7 +18,7 @@
 # list of available options, their meanings and defaults, please see the
 # ssh_config(5) man page.
 
-# Git
+# Git hosts
 Host github
     HostName github.com
     User git
@@ -36,9 +36,9 @@ Host home
     HostName 4U6U57.duckdns.org
     User avalera
     Port 7924
-Host print
+Host rpi
     HostName ucsc.duckdns.org
-    User avalera
+    User pi
     Port 7924
 Host swag
     HostName YOLOSWAG.duckdns.org
