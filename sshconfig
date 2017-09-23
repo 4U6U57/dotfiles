@@ -36,7 +36,7 @@ Host home
     HostName 4U6U57.duckdns.org
     User avalera
     Port 7924
-Host rpi
+Host rpw
     HostName ucsc.duckdns.org
     User pi
     Port 7924

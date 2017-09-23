@@ -54,10 +54,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'dietsche/vim-lastplace'
-Plug 'vim-latex/vim-latex'
 Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-sensible'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'lervag/vimtex'
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
