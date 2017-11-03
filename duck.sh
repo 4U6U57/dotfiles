@@ -5,12 +5,13 @@
 
 quack() {
   token="6843d989-1b7a-47bc-8409-88609ac8d54c" # My token, plz don't steal
+  ip="$(ip addr | grep "inet\s" | awk -F '[ \t]+|/' '{print $3}' | grep -v 127.0.0.1 | tail -n +1)"
   #ipv6=$(ip -6 addr | grep inet6 | awk -F '[ \t]+|/' '{print $3}' | grep -v ^::1 | grep -v ^fe80 | tail -n +2)
-  ipv6=$(ip -6 addr | grep inet6 | grep dynamic | awk -F '[ \t]+|/' '{print $3}' | grep -v ^::1 | grep -v ^fe8 | tail -n +1)
+  ipv6="$(ip -6 addr | grep inet6 | grep dynamic | awk -F '[ \t]+|/' '{print $3}' | grep -v ^::1 | grep -v ^fe8 | tail -n +1)"
   waittime=5
 
   echo "duck.sh: duckdns updater"
-  echo "Host $HOSTNAME has ipv6 addr $ipv6"
+  echo "Host $HOSTNAME has ip addr $ip and ipv6 addr $ipv6"
 
   case $HOSTNAME in
     (4U6U57-RPW)
@@ -32,7 +33,7 @@ quack() {
     echo -n "$domainupper.duckdns.org: "
     domain=${domainupper,,}
     sleep $waittime
-    echo url="https://www.duckdns.org/update?domains=$domain&token=$token&ipv6=$ipv6" | curl -k -K -
+    echo url="https://www.duckdns.org/update?domains=$domain&token=$token&ip=$ip&ipv6=$ipv6" | curl -k -K -
     echo
   done
 }
