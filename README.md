@@ -1,11 +1,7 @@
 # dotfiles
 
-[![Join the chat at https://gitter.im/4U6U57/dotfiles]
-(https://badges.gitter.im/4U6U57/dotfiles.svg)]
-(https://gitter.im/4U6U57/dotfile)
-[![Check the scrum board at waffle.io]
-(https://badge.waffle.io/4U6U57/dotfiles.svg?label=ready&title=scrum%20on%20waffle.io)]
-(http://waffle.io/4U6U57/dotfiles)
+[![Join the chat at https://gitter.im/4U6U57/dotfiles](https://badges.gitter.im/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles)
+[![Check the scrum board at waffle.io](https://badge.waffle.io/4U6U57/dotfiles.svg?label=ready&title=scrum%20on%20waffle.io)](http://waffle.io/4U6U57/dotfiles)
 
 My personal preference files "dotfiles" for Linux. Feel free to look around, and
 fork it if you want.
