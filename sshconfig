@@ -40,9 +40,10 @@ Host rpw
     HostName ucsc.duckdns.org
     User pi
     Port 7924
-Host swag
+Host rpz
     HostName YOLOSWAG.duckdns.org
-    User avalera
+    User pi
+    Port 7924
 Host swagger
     HostName YOLOSWAGGER.duckdns.org
     User avalera
