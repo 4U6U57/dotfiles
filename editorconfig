@@ -18,9 +18,17 @@ max_line_length = 80
 
 [{Makefile,makefile,*.mk}]
 indent_style = tab
+indent_size = 2
 
 [*.md]
+indent_style = space
 indent_size = 4
+max_line_length = 0
 
 [*.sh]
+max_line_length = 0
+
+[*.py]
+indent_style = tab
+indent_size = 4
 max_line_length = 0

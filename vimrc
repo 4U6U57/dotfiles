@@ -85,8 +85,8 @@ set magic
 " Use spaces instead of tabs, smart tabbing
 "set expandtab
 "set smarttab
-" set shiftwidth=2
-set tabstop=2
+"set shiftwidth=2
+"set tabstop=2
 
 " Color scheme
 " Note that this is overriden by vim-colors-solarized
