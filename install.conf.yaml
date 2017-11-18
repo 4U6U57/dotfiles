@@ -15,6 +15,7 @@
 - link:
     ~/bin/crontab-edit: crontab-edit.sh
     ~/bin/duck: duck.sh
+    ~/bin/repo-icon: repo-icon.sh
     ~/.bash_aliases:
     ~/.bash_profile:
     ~/.bash_prompt:
@@ -22,6 +23,7 @@
     ~/.crontab:
     ~/.dotfiles: ''
     ~/.editorconfig:
+    ~/.face: face.png
     ~/.gitconfig:
     ~/.ssh/config: sshconfig
     ~/.vimrc:

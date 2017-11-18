@@ -13,14 +13,14 @@ while getopts "sguh" opt; do
       if [[ -e $KeyLocation ]]; then
         echo "There is already a key at $KeyLocation."
         echo -n "(D)elete it and regenerate, (S)elect other location, or (C)ancel: "
-        read $Input
+        read $Input -t 10
         case $Input in
           (D|d)
             echo "Deleting $KeyLocation and regenerating."
             ;;
           (S|s)
             echo -n "Enter in the new key location: "
-            read $KeyLocation
+            read $KeyLocation -t 60
             [[ -z $KeyLocation ]] && "You did not enter in a location, quitting." && exit
             ;;
           (*)
@@ -33,6 +33,7 @@ while getopts "sguh" opt; do
       ssh-keygen -t rsa -b 4096 -C "$UserName@$HostName" -N "" -f $DefaultKeyLocation
       ;;
     (g)
+      echo "Warning: Does not currently check if you already have a key"
       KeyScript=$(mktemp)
       echo "%echo Generating gpg key" >>$KeyScript
       echo "Key-Type: RSA" >>$KeyScript

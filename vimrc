@@ -151,6 +151,9 @@ map <F12> :VimrcUpdate<CR>
 " csv
 let g:csv_autocmd_arrange = 1
 
+" DoxygenToolkit
+let g:DoxygenToolkit_authorName = system("git config --get user.name")
+
 " nerdtree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
