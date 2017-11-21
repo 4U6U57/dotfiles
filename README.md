@@ -18,7 +18,7 @@ The [vimrc] configuration can be installed as a standalone project with the
 following command (requires `curl`):
 
 ```bash
-curl -fLo ~/.vimrc --create-dirs https://gitlab.com/4U6U57/dotfiles/raw/master/vimrc
+curl -fLo ~/.vimrc --create-dirs https://raw.githubusercontent.com/4U6U57/dotfiles/master/vimrc
 ```
 
 Updating vimrc is done with the vim command `:VimrcUpdate` or by pressing `F12`
@@ -63,3 +63,4 @@ better. Free free to drop by our Gitter chat room (linked above) for any
 questions/suggestions. You can also post a GitHub issue for specific bugs.
 
 [dotbot]: https://github.com/anishathalye/dotbot
+[vimrc]: vimrc

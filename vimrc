@@ -121,7 +121,8 @@ function! VimrcUpdater()
   if empty(glob('~/.dotfiles')) &&
         \ matchstr(readfile('~/.vimrc'),'OVERWRITE:\s*true')
     !curl -fLo ~/.vimrc --create-dirs
-          \ https://gitlab.com/4U6U57/dotfiles/raw/master/vimrc
+          \ https://raw.githubusercontent.com
+          \/4U6U57/dotfiles/master/vimrc
           \ && echo "[vimrc] updated by curl"
   else
     !echo "[vimrc] ignored: update with dotfiles"
@@ -132,7 +133,8 @@ function! VimrcUpdater()
         \'part of the 4U6U57/dotfiles project') &&
         \ matchstr(readfile('~/.editorconfig'),'OVERWRITE:\s*true'))
     !curl -fLo ~/.editorconfig --create-dirs
-          \ https://gitlab.com/4U6U57/dotfiles/raw/master/editorconfig
+          \ https://raw.githubusercontent.com
+          \/4U6U57/dotfiles/master/editorconfig
           \ && echo "[editorconfig] updated by curl"
   else
     !echo "[editorconfig] ignored: to keep edits"
