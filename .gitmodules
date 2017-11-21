@@ -1,3 +1,6 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot.git
+[submodule "repo-iconify"]
+	path = bin/repo-iconify
+	url = git@gitlab.com:4U6U57/repo-iconify

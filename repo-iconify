@@ -1,0 +1,15 @@
+#!/bin/bash
+
+##
+# @file repo-iconify
+# @brief repo-iconify configuration file
+# @author August Valera
+# @version
+# @date 2017-11-20
+#
+Root=true
+InputFile=~/.face
+GenerateImageData
+Offset=+0-$((MinDim / 5))
+Color=white
+Background="#EF6C00"

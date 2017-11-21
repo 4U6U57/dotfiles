@@ -13,9 +13,9 @@
   - '~/bin'
 
 - link:
-    ~/bin/crontab-edit: crontab-edit.sh
-    ~/bin/duck: duck.sh
-    ~/bin/repo-icon: repo-icon.sh
+    ~/bin/crontab-edit: bin/crontab-edit.sh
+    ~/bin/duck: bin/duck.sh
+    ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
     ~/.bash_aliases:
     ~/.bash_profile:
     ~/.bash_prompt:
@@ -25,6 +25,7 @@
     ~/.editorconfig:
     ~/.face: face.png
     ~/.gitconfig:
+    ~/.repo-iconify:
     ~/.ssh/config: sshconfig
     ~/.vimrc:
 

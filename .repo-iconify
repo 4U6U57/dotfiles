@@ -1,0 +1,10 @@
+##
+# @file .repo-iconify
+# @brief repo-iconify config for the 4U6U57/dotfiles repo
+# @author August Valera
+# @version dotfiles
+# @date 2017-11-20
+#
+# Not to be confused with the root repo-iconify config file, without prefix '.'
+
+Text=DOT
