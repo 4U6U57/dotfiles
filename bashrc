@@ -49,6 +49,9 @@ export EDITOR="vim"
 sourcer ~/.bash_aliases
 sourcer ~/.bash_prompt
 
+# Autocompletion
+sourcer ~/.git-completion.bash
+
 # From default bashrc in Ubuntu
 
 # don't put duplicate lines or lines starting with space in the history.

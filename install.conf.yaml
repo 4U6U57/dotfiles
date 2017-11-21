@@ -7,10 +7,17 @@
       create: true
       relink: true
 
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - [date > ~/.dotfiles_update, Logging last update]
+
 - clean:
   - '~'
   - '~/.ssh'
   - '~/bin'
+
+- shell:
+  - ["FILE=git-completion.bash && curl https://raw.githubusercontent.com/git/git/master/contrib/completion/$FILE -o $FILE -z $FILE", Downloading git-completion script]
 
 - link:
     ~/bin/crontab-edit: bin/crontab-edit.sh
@@ -25,11 +32,11 @@
     ~/.editorconfig:
     ~/.face: face.png
     ~/.gitconfig:
+    ~/.git-completion.bash:
     ~/.repo-iconify:
     ~/.ssh/config: sshconfig
     ~/.vimrc:
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
   - [crontab ~/.crontab, Configuring crontab]
-  - [date > ~/.dotfiles_update, Logging last update]
+
