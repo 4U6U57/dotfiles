@@ -13,3 +13,4 @@ GenerateImageData
 Offset=+0-$((MinDim / 5))
 Color=white
 Background="#EF6C00"
+Suffix=" "
