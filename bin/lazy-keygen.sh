@@ -6,13 +6,23 @@ UserFullName=$(git config --get user.name)
 UserEmail=$(git config --get user.email)
 HostName=$HOSTNAME
 
+PrintHelp() {
+  echo "$(basename $0): Key generator for lazy"
+  echo
+  echo -e "\t-s\tGenerate SSH key with ssh-keygen"
+  echo -e "\t-g\tGenerate GPG key with gpg --gen-key"
+  echo -e "\t-u\tPrints out generated user info that would be used"
+  echo -e "\t-h\tHelp, prints this message"
+}
+[[ -z $@ ]] && PrintHelp
+
 while getopts "sguh" opt; do
   case $opt in
     (s)
       KeyLocation=~/.ssh/id_rsa
       if [[ -e $KeyLocation ]]; then
         echo "There is already a key at $KeyLocation."
-        echo -n "(D)elete it and regenerate, (S)elect other location, or (C)ancel: "
+        echo -n "(D)elete it and regenerate, (S)elect other location, or (C)ancel (default): "
         read $Input -t 10
         case $Input in
           (D|d)
@@ -22,15 +32,20 @@ while getopts "sguh" opt; do
             echo -n "Enter in the new key location: "
             read $KeyLocation -t 60
             [[ -z $KeyLocation ]] && "You did not enter in a location, quitting." && exit
+            KeyLocation=$(dirname $KeyLocation)/$(basename $KeyLocation .pub)
             ;;
           (*)
-            echo "Okay, quitting."
+            echo "Okay, not creating a new SSH key."
+            echo "Here is your current SSH public key:"
+            cat $KeyLocation.pub
             exit
             ;;
         esac
       fi
       echo "Generating ssh key at $KeyLocation."
       ssh-keygen -t rsa -b 4096 -C "$UserName@$HostName" -N "" -f $DefaultKeyLocation
+      echo "Here's your SSH public key:"
+      cat $KeyLocation.pub
       ;;
     (g)
       echo "Warning: Does not currently check if you already have a key"
@@ -56,13 +71,7 @@ while getopts "sguh" opt; do
       echo -e "Hostname (\$HOSTNAME):\t\t$HostName"
       ;;
     (\? | h)
-      echo "$(basename $0): Key generator for lazy"
-      echo
-      echo -e "\t-s\tGenerate SSH key with ssh-keygen"
-      echo -e "\t-g\tGenerate GPG key with gpg --gen-key"
-      echo -e "\t-u\tPrints out generated user info that would be used"
-      echo -e "\t-h\tHelp, prints this message"
-      exit
+      PrintHelp && exit
       ;;
   esac
 done

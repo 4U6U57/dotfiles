@@ -4,3 +4,6 @@
 [submodule "repo-iconify"]
 	path = bin/repo-iconify
 	url = git@gitlab.com:4U6U57/repo-iconify
+[submodule "bin/open-window"]
+	path = bin/open-window
+	url = git@gitlab.com:4U6U57/open-window.git

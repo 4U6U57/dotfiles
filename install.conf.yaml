@@ -23,7 +23,8 @@
 - link:
     ~/bin/crontab-edit: bin/crontab-edit.sh
     ~/bin/duck: bin/duck.sh
-    ~/bin/open-window: bin/open-window.sh
+    ~/bin/lazy-keygen: bin/lazy-keygen.sh
+    ~/bin/open-window: bin/open-window/open-window.sh
     ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
     ~/.bash_aliases:
     ~/.bash_profile:
