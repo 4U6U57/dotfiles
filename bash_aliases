@@ -24,3 +24,6 @@ alias ls="ls --color=auto"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Make opening files more like Mac
+alias open='xdg-open'

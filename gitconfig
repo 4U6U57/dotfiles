@@ -4,11 +4,18 @@
 # Otherwise all your commits will be attributed to me!
 
 [user]
-	name = August Valera
-	email = 4U6U57@gmail.com
+  name = August Valera
+  email = 4U6U57@gmail.com
 [push]
-	default = matching
+  default = matching
 [color]
-	ui = true
+  ui = true
 [commit]
-	verbose = true
+  verbose = true
+[alias]
+  graph = log --graph --oneline --decorate
+  web = "!GitOpen(){\
+    RepoOrigin=$(git remote get-url origin);\
+    echo $RepoOrigin | grep 'git@.*:.*' >/dev/null && RepoOrigin=$(echo $RepoOrigin | sed 's/:/\\//g;s/git@/http:\\/\\//g');\
+    xdg-open $RepoOrigin;\
+    };GitOpen"

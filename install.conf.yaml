@@ -30,6 +30,7 @@
     ~/.bash_profile:
     ~/.bash_prompt:
     ~/.bashrc:
+    ~/.bin:
     ~/.crontab:
     ~/.dotfiles: ''
     ~/.editorconfig:
