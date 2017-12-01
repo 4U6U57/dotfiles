@@ -15,7 +15,9 @@
 [alias]
   graph = log --graph --oneline --decorate
   web = "!GitOpen(){\
-    RepoOrigin=$(git remote get-url origin);\
+    Branch=$@;\
+    test -z $Branch && Branch=origin;\
+    RepoOrigin=$(git remote get-url $Branch);\
     echo $RepoOrigin | grep 'git@.*:.*' >/dev/null && RepoOrigin=$(echo $RepoOrigin | sed 's/:/\\//g;s/git@/http:\\/\\//g');\
     xdg-open $RepoOrigin;\
     };GitOpen"
