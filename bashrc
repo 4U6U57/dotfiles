@@ -51,6 +51,7 @@ sourcer ~/.bash_prompt
 
 # Autocompletion
 sourcer ~/.git-completion.bash
+sourcer ~/.ssh-completion.bash
 
 # From default bashrc in Ubuntu
 

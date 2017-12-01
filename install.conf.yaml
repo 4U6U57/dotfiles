@@ -37,6 +37,7 @@
     ~/.face: face.png
     ~/.gitconfig:
     ~/.git-completion.bash:
+    ~/.ssh-completion.bash:
     ~/.repo-iconify:
     ~/.ssh/config: sshconfig
     ~/.vimrc:
