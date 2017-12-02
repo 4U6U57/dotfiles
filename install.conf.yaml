@@ -25,8 +25,8 @@
     ~/bin/duck: bin/duck.sh
     ~/bin/git-open: bin/git-open/git-open
     ~/bin/lazy-keygen: bin/lazy-keygen.sh
-    ~/bin/open-window: bin/open-window/open-window.sh
     ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
+    ~/bin/wsl-open: bin/wsl-open/wsl-open.sh
     ~/.bash_aliases:
     ~/.bash_profile:
     ~/.bash_prompt:

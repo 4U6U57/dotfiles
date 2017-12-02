@@ -5,8 +5,8 @@
 	path = bin/repo-iconify
 	url = git@gitlab.com:4U6U57/repo-iconify
 [submodule "bin/open-window"]
-	path = bin/open-window
-	url = git@gitlab.com:4U6U57/open-window.git
+	path = bin/wsl-open
+	url = git@gitlab.com:4U6U57/wsl-open.git
 [submodule "bin/git-open"]
 	path = bin/git-open
 	url = https://github.com/paulirish/git-open
