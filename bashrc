@@ -86,4 +86,4 @@ custom_user_config() {
 [[ $USER == "avalera" ]] && custom_user_config
 
 # Adding open-window as a browser for Bash for Windows
-export BROWSER=$BROWSER:wsl-open
+[[ $(uname -r) == *Microsoft ]] && export BROWSER=$BROWSER:wsl-open
