@@ -10,3 +10,6 @@
 [submodule "bin/git-open"]
 	path = bin/git-open
 	url = https://github.com/paulirish/git-open
+[submodule "bin/liquidprompt"]
+	path = bin/liquidprompt
+	url = git@github.com:nojhan/liquidprompt.git

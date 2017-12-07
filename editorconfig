@@ -23,7 +23,7 @@ indent_size = 2
 [*.md]
 indent_style = space
 indent_size = 4
-max_line_length = 0
+# max_line_length = 0
 
 [*.sh]
 max_line_length = 0
