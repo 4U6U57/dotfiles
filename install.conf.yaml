@@ -8,10 +8,10 @@
       relink: true
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - [git submodule sync, Syncing submodule remotes]
-  - [git submodule foreach git pull origin master, Updating submodule contents]
-  - [date > ~/.dotfiles_update, Logging last update]
+  - ["git submodule update --init --recursive", Installing submodules]
+  - ["git submodule sync", Syncing submodule remotes]
+  - ["git submodule foreach git pull origin master", Updating submodule contents]
+  - ["date > ~/.dotfiles_update", Logging last update]
 
 - clean:
   - '~'
@@ -19,7 +19,7 @@
   - '~/bin'
 
 - shell:
-  - ["FILE=git-completion.bash && curl https://raw.githubusercontent.com/git/git/master/contrib/completion/$FILE -o $FILE -z $FILE", Downloading git-completion script]
+  - ["FILE=git-completion.bash; curl https://raw.githubusercontent.com/git/git/master/contrib/completion/$FILE -o $FILE -z $FILE", Downloading git-completion script]
 
 - link:
     ~/bin/crontab-edit: bin/crontab-edit.sh
@@ -40,12 +40,13 @@
     ~/.gitconfig:
     ~/.git-completion.bash:
     ~/.liquidpromptrc:
+    ~/.liquid.ps1:
+    ~/.liquid.theme:
     ~/.ssh-completion.bash:
     ~/.repo-iconify:
     ~/.ssh/config: sshconfig
     ~/.vimrc:
 
 - shell:
-  - [chmod 700 ~/.ssh/config, Securing SSH config]
-  - [crontab ~/.crontab, Configuring crontab]
-
+  - ["chmod 700 ~/.ssh/config", Securing SSH config]
+  - ["crontab ~/.crontab", Configuring crontab]

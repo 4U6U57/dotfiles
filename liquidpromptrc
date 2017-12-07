@@ -8,6 +8,9 @@
 #source ~/.config/liquidprompt/nojhan.theme
 #LP_PS1_FILE=~/.config/liquidprompt/nojhan.ps1
 
+sourcer ~/.liquid.theme
+LP_PS1_FILE=~/.liquid.ps1
+
 #############
 # BEHAVIOUR #
 #############
@@ -156,7 +159,7 @@ LP_ENABLE_TITLE=0
 LP_ENABLE_SCREEN_TITLE=0
 
 # Use different colors for the different hosts you SSH to
-LP_ENABLE_SSH_COLORS=0
+LP_ENABLE_SSH_COLORS=1
 
 # Specify a list of complete and colon (":") separated paths in which, all vcs
 # will be disabled
