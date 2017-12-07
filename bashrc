@@ -47,7 +47,8 @@ export EDITOR="vim"
 
 # External scripts
 sourcer ~/.bash_aliases
-sourcer ~/.bash_prompt
+#sourcer ~/.bash_prompt
+[[ $- = *i* ]] && sourcer ~/bin/liquidprompt/liquidprompt
 
 # Autocompletion
 sourcer ~/.git-completion.bash

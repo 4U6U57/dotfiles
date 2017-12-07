@@ -1,12 +1,15 @@
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot.git
-[submodule "repo-iconify"]
-	path = bin/repo-iconify
-	url = git@gitlab.com:4U6U57/repo-iconify
-[submodule "bin/open-window"]
-	path = bin/wsl-open
-	url = git@gitlab.com:4U6U57/wsl-open.git
 [submodule "bin/git-open"]
-	path = bin/git-open
-	url = https://github.com/paulirish/git-open
+	 path = bin/git-open
+	 url = https://github.com/paulirish/git-open
+[submodule "bin/liquidprompt"]
+	 path = bin/liquidprompt
+	 url = https://github.com/nojhan/liquidprompt.git
+[submodule "bin/open-window"]
+	 path = bin/wsl-open
+	 url = https://gitlab.com/4U6U57/wsl-open.git
+[submodule "dotbot"]
+	 path = dotbot
+	 url = https://github.com/anishathalye/dotbot.git
+[submodule "repo-iconify"]
+	 path = bin/repo-iconify
+	 url = https://gitlab.com/4U6U57/repo-iconify
