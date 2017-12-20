@@ -1,0 +1,33 @@
+{
+  "name": "@4u6u57/dotfiles",
+  "version": "0.0.1",
+  "description": "August Valera's preferences for Linux",
+  "main": "install",
+  "scripts": {
+    "install": "./install",
+    "test": "for test in lint; do npm run $test; done",
+    "lint": "for lint in lint:md lint:sh; do npm run $lint; done",
+    "lint:sh": "shellcheck *.bash bin/*.sh",
+    "lint:md": "markdownlint *.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/4U6U57/dotfiles.git"
+  },
+  "keywords": [
+    "dotfiles",
+    "linux",
+    "vimrc",
+    "bash"
+  ],
+  "author": "August Valera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/4U6U57/dotfiles/issues"
+  },
+  "homepage": "https://gitlab.com/4U6U57/dotfiles#README",
+  "devDependencies": {
+    "markdownlint-cli": "^0.5.0",
+    "shellcheck": "0.0.8"
+  }
+}

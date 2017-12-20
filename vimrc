@@ -35,11 +35,11 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'jiangmiao/auto-pairs'
 Plug 'vim-scripts/bats.vim'
-Plug 'chrisbra/csv.vim'
+Plug 'chrisbra/csv.vim', { 'for': 'csv' }
 Plug 'vim-scripts/DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'albertorestifo/github.vim'
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'yggdroot/indentline'
 Plug 'gregsexton/matchtag'
 Plug 'scrooloose/nerdtree'
@@ -50,15 +50,15 @@ Plug 'bling/vim-airline'
 Plug 'chiel92/vim-autoformat'
 Plug 'conradirwin/vim-bracketed-paste'
 Plug 'altercation/vim-colors-solarized'
-Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'cpp' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'dietsche/vim-lastplace'
-Plug 'gabrielelana/vim-markdown'
+Plug 'gabrielelana/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-sensible'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'lervag/vimtex'
+Plug 'lervag/vimtex', { 'for': 'latex' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -119,6 +119,7 @@ imap <F3> <Esc><F3>
 
 " Update Vimrc
 function! VimrcUpdater()
+  PlugUpgrade
   if empty(glob('~/.dotfiles')) &&
         \ matchstr(readfile('~/.vimrc'),'OVERWRITE:\s*true')
     !curl -fLo ~/.vimrc --create-dirs

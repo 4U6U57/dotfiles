@@ -54,7 +54,7 @@ repo.
 - [dotbot]: Dotfile installer
 - [editorconfig](https://editorconfig.org): Text editor preferences
 - [junegunn/vim-plug](https://github.com/junegunn/vim-plug): Vim plugin manager
-    - Various other Vim plugins, listed in detail in the [vimrc] file
+  - Various other Vim plugins, listed in detail in the [vimrc] file
 
 ## Feedback and Other Questions
 

@@ -11,6 +11,7 @@
   - ["git submodule update --init --recursive", Installing submodules]
   - ["git submodule sync", Syncing submodule remotes]
   - ["git submodule foreach git pull origin master", Updating submodule contents]
+  - ["npm update -g", Updating npm packages]
   - ["date > ~/.dotfiles_update", Logging last update]
 
 - clean:
@@ -29,11 +30,11 @@
     ~/bin/liquidprompt: bin/liquidprompt
     ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
     ~/bin/wsl-open: bin/wsl-open/wsl-open.sh
-    ~/.bash_aliases:
-    ~/.bash_profile:
-    ~/.bashrc:
+    ~/.bash_aliases: bash_aliases.bash
+    ~/.bash_profile: bash_profile.bash
+    ~/.bashrc: bashrc.bash
     ~/.bin:
-    ~/.crontab:
+    ~/.crontab: crontab.bash
     ~/.dotfiles: ''
     ~/.editorconfig:
     ~/.face: face.png
