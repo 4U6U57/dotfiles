@@ -13,28 +13,10 @@ esac
 # Duplicate definition of the one found in .bash_profile
 sourcer() {
   # sources files that actually exist
-  [[ -r $1 ]] && [[ -f $1 ]] && source $1
+  # shellcheck disable=SC1090
+  [[ -r "$1" ]] && [[ -f "$1" ]] && source "$1"
 }
 export -f sourcer
-
-custom_host_vars() {
-  # TODO: Modify this to suit your own specific computers
-  Jekyll=0 # If we need to install Jekyll
-  CubLinux=0 # If distro is Cub Linux
-  case $HOSTNAME in
-    (unix*.lt.ucsc.edu)
-      ;;
-    (VALERAPCWK)
-      CubLinux=1
-      ;;
-    (YOLOSWAG)
-      ;;
-    (YOLOSWAGGER)
-      CubLinux=1
-      ;;
-  esac
-}
-[[ $USER = "avalera" ]] && custom_host_vars
 
 # PATH
 export PATH="$PATH:$HOME/bin"
@@ -47,12 +29,15 @@ export EDITOR="vim"
 
 # External scripts
 sourcer ~/.bash_aliases
-#sourcer ~/.bash_prompt
 [[ $- = *i* ]] && sourcer ~/bin/liquidprompt/liquidprompt
 
 # Autocompletion
-sourcer ~/.git-completion.bash
-sourcer ~/.ssh-completion.bash
+CompletionDir=~/.completion
+if [[ -d "$CompletionDir" ]]; then
+  for Script in "$CompletionDir"/*; do
+    sourcer "$Script"
+  done
+fi
 
 # From default bashrc in Ubuntu
 

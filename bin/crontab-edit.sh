@@ -6,11 +6,11 @@
 CRONFILE=~/.crontab
 SWAPFILE=$(mktemp)
 
-crontab -l > $SWAPFILE
-if [[ -e $SWAPFILE ]] && ! diff $SWAPFILE $CRONFILE; then
+crontab -l >"$SWAPFILE"
+if [[ -e "$SWAPFILE" ]] && ! diff "$SWAPFILE" "$CRONFILE"; then
   echo "Error: Installed crontab differs from .crontab fron dotfiles"
 else
   crontab -e
-  crontab -l > $CRONFILE
+  crontab -l >"$CRONFILE"
 fi
-rm -f $SWAPFILE
+rm -f "$SWAPFILE"

@@ -7,7 +7,7 @@
     "install": "./install",
     "test": "for test in lint; do npm run $test; done",
     "lint": "for lint in lint:md lint:sh; do npm run $lint; done",
-    "lint:sh": "shellcheck *.bash bin/*.sh",
+    "lint:sh": "shellcheck *.sh bin/*.sh",
     "lint:md": "markdownlint *.md"
   },
   "repository": {

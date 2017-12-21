@@ -5,7 +5,7 @@
 
 quack() {
   token="6843d989-1b7a-47bc-8409-88609ac8d54c" # My token, plz don't steal
-  ip="$(ip addr | grep "inet\s" | awk -F '[ \t]+|/' '{print $3}' | grep -v 127.0.0.1 | tail -n +1)"
+  ip="$(ip addr | grep "inet\\s" | awk -F '[ \t]+|/' '{print $3}' | grep -v 127.0.0.1 | tail -n +1)"
   #ipv6=$(ip -6 addr | grep inet6 | awk -F '[ \t]+|/' '{print $3}' | grep -v ^::1 | grep -v ^fe80 | tail -n +2)
   ipv6="$(ip -6 addr | grep inet6 | grep dynamic | awk -F '[ \t]+|/' '{print $3}' | grep -v ^::1 | grep -v ^fe8 | tail -n +1)"
   waittime=5
