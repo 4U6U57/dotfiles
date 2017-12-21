@@ -34,16 +34,16 @@
     ~/.bash_profile: bash_profile.bash
     ~/.bashrc: bashrc.bash
     ~/.bin:
-    ~/.crontab: crontab.bash
+    ~/.crontab:
     ~/.dotfiles: ''
     ~/.editorconfig:
     ~/.face: face.png
     ~/.gitconfig:
-    ~/.git-completion.bash:
+    ~/.completion/git-completion.bash:
     ~/.liquidpromptrc:
     ~/.liquid.ps1:
     ~/.liquid.theme:
-    ~/.ssh-completion.bash:
+    ~/.completion/ssh-completion.bash:
     ~/.repo-iconify:
     ~/.ssh/config: sshconfig
     ~/.vimrc:

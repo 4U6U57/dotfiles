@@ -13,13 +13,15 @@ esac
 # Duplicate definition of the one found in .bash_profile
 sourcer() {
   # sources files that actually exist
-  [[ -r $1 ]] && [[ -f $1 ]] && source $1
+  # shellcheck disable=SC1090
+  [[ -r "$1" ]] && [[ -f "$1" ]] && source "$1"
 }
 export -f sourcer
 
 custom_host_vars() {
   # TODO: Modify this to suit your own specific computers
   Jekyll=0 # If we need to install Jekyll
+  # shellcheck disable=SC2034
   CubLinux=0 # If distro is Cub Linux
   case $HOSTNAME in
     (unix*.lt.ucsc.edu)
@@ -51,8 +53,12 @@ sourcer ~/.bash_aliases
 [[ $- = *i* ]] && sourcer ~/bin/liquidprompt/liquidprompt
 
 # Autocompletion
-sourcer ~/.git-completion.bash
-sourcer ~/.ssh-completion.bash
+CompletionDir=~/.completion
+if [[ -d "$CompletionDir" ]]; then
+  for Script in "$CompletionDir"/*; do
+    sourcer "$Script"
+  done
+fi
 
 # From default bashrc in Ubuntu
 

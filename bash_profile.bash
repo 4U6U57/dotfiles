@@ -5,7 +5,8 @@
 
 sourcer() {
   # sources files that actually exist
-  [[ -r $1 ]] && [[ -f $1 ]] && source $1
+  # shellcheck disable=SC1090
+  [[ -r "$1" ]] && [[ -f "$1" ]] && source "$1"
 }
 export -f sourcer
 
