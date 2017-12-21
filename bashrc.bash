@@ -18,26 +18,6 @@ sourcer() {
 }
 export -f sourcer
 
-custom_host_vars() {
-  # TODO: Modify this to suit your own specific computers
-  Jekyll=0 # If we need to install Jekyll
-  # shellcheck disable=SC2034
-  CubLinux=0 # If distro is Cub Linux
-  case $HOSTNAME in
-    (unix*.lt.ucsc.edu)
-      ;;
-    (VALERAPCWK)
-      CubLinux=1
-      ;;
-    (YOLOSWAG)
-      ;;
-    (YOLOSWAGGER)
-      CubLinux=1
-      ;;
-  esac
-}
-[[ $USER = "avalera" ]] && custom_host_vars
-
 # PATH
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:."
@@ -49,7 +29,6 @@ export EDITOR="vim"
 
 # External scripts
 sourcer ~/.bash_aliases
-#sourcer ~/.bash_prompt
 [[ $- = *i* ]] && sourcer ~/bin/liquidprompt/liquidprompt
 
 # Autocompletion
