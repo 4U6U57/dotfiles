@@ -31,7 +31,7 @@
     ~/bin/wsl-open: bin/wsl-open/wsl-open.sh
     ~/.bash_aliases: bash_aliases.sh
     ~/.bash_profile: bash_profile.sh
-    ~/.bashrc: bashrc.bash
+    ~/.bashrc: bashrc.sh
     ~/.bin:
     ~/.completion/git-completion.bash:
     ~/.completion/ssh-completion.sh:

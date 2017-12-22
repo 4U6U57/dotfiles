@@ -14,3 +14,13 @@
   verbose = true
 [alias]
   graph = log --graph --oneline --decorate
+  wipe = "!f() {\
+    git fetch -p;\
+    for branch in $(git branch -vv | grep ': gone]'); do\
+    git branch -D $branch;\
+    done\
+    }; f"
+  a = add -A :/
+  c = commit -av
+  p = push
+  s = status
