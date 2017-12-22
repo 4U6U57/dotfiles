@@ -20,7 +20,5 @@
     git branch -D $branch;\
     done\
     }; f"
-  a = add -A :/
-  c = commit -av
-  p = push
-  s = status
+  addall = add -A :/
+  commitall = commit -av
