@@ -10,6 +10,9 @@
 [submodule "dotbot"]
 	 path = dotbot
 	 url = https://github.com/anishathalye/dotbot.git
+[submodule "private"]
+	 path = private
+	 url = git@gitlab.com:4U6U57/dotfiles.private
 [submodule "repo-iconify"]
 	 path = bin/repo-iconify
 	 url = https://gitlab.com/4U6U57/repo-iconify

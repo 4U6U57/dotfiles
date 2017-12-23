@@ -25,6 +25,7 @@
     ~/bin/crontab-edit: bin/crontab-edit.sh
     ~/bin/duck: bin/duck.sh
     ~/bin/git-open: bin/git-open/git-open
+    ~/bin/git-sortmodules: bin/git-sortmodules.sh
     ~/bin/lazy-keygen: bin/lazy-keygen.sh
     ~/bin/liquidprompt: bin/liquidprompt
     ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
