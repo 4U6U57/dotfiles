@@ -4,7 +4,7 @@
   "description": "August Valera's preferences for Linux",
   "main": "install",
   "scripts": {
-    "install": "./install",
+    "install": "./install.sh",
     "test": "for test in lint; do npm run $test; done",
     "lint": "for lint in lint:md lint:sh; do npm run $lint; done",
     "lint:sh": "shellcheck *.sh bin/*.sh",

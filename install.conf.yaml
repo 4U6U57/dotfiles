@@ -1,6 +1,6 @@
 # Config file for dotbot
 # August Valera (@4U6U57)
-# Run ./install to run dotbot
+# Run ./install.sh to run dotbot
 
 - defaults:
     link:
@@ -35,18 +35,11 @@
     ~/.bin:
     ~/.completion/git-completion.bash:
     ~/.completion/ssh-completion.sh:
-    ~/.crontab:
     ~/.dotfiles: ''
     ~/.editorconfig:
-    ~/.face: face.png
     ~/.gitconfig:
     ~/.liquidpromptrc:
     ~/.liquid.ps1:
     ~/.liquid.theme:
     ~/.repo-iconify:
-    ~/.ssh/config: sshconfig
     ~/.vimrc:
-
-- shell:
-  - ["chmod 700 ~/.ssh/config", Securing SSH config]
-  - ["crontab ~/.crontab", Configuring crontab]
