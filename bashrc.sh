@@ -62,3 +62,8 @@ shopt -s nocaseglob # Case insensitive autocorrect
 
 # Adding open-window as a browser for Bash for Windows
 [[ $(uname -r) == *Microsoft ]] && export BROWSER=$BROWSER:wsl-open
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+sourcer "$NVM_DIR/nvm.sh"  # This loads nvm
+sourcer "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

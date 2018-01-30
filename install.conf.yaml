@@ -20,6 +20,7 @@
 
 - shell:
   - ["FILE=git-completion.bash; curl https://raw.githubusercontent.com/git/git/master/contrib/completion/$FILE -o $FILE -z $FILE", Downloading git-completion script]
+  - ["FILE=mvn-completion.bash; curl https://raw.githubusercontent.com/juven/maven-bash-completion/master/contrib/bash_completion.bash -o $FILE -z $FILE", Downloading mvn-completion script]
 
 - link:
     ~/bin/crontab-edit: bin/crontab-edit.sh
@@ -36,6 +37,7 @@
     ~/.bashrc: bashrc.sh
     ~/.bin:
     ~/.completion/git-completion.bash:
+    ~/.completion/mvn-completion.bash:
     ~/.completion/ssh-completion.sh:
     ~/.dotfiles: ''
     ~/.editorconfig:
