@@ -5,8 +5,8 @@
   "main": "install",
   "scripts": {
     "install": "./install",
-    "test": "for test in lint; do npm run $test; done",
-    "lint": "for lint in lint:md lint:sh; do npm run $lint; done",
+    "test": "for test in lint; do npm run $test || exit 1; done",
+    "lint": "for lint in lint:md lint:sh; do npm run $lint || exit 1; done",
     "lint:sh": "shellcheck *.sh bin/*.sh",
     "lint:md": "markdownlint *.md"
   },

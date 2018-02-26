@@ -1,6 +1,11 @@
 # dotfiles
 
 [![Join the chat at https://gitter.im/4U6U57/dotfiles](https://badges.gitter.im/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles)
+[![pipeline
+status](https://gitlab.com/4U6U57/dotfiles/badges/master/pipeline.svg)](https://gitlab.com/4U6U57/dotfiles/commits/master)
+[![npm
+version](https://img.shields.io/npm/v/@4U6U57/dotfiles.svg)](http://npmjs.com/package/@4U6U57/dotfiles)
+
 
 My personal preference files "dotfiles" for Linux. Feel free to look around, and
 fork it if you want.

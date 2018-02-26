@@ -62,7 +62,6 @@ Plug 'lervag/vimtex', { 'for': 'latex' }
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " GENERAL PREFERENCES
 
 " Syntax color-coding
@@ -146,6 +145,14 @@ function! VimrcUpdater()
 endfunction
 command! VimrcUpdate call VimrcUpdater()
 map <F12> :VimrcUpdate<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FILE SPECIFIC PREFERENCES
+"
+" Vim specific things only, try to use editorconfig.org as much as possible
+
+" Spellcheck
+autocmd FileType md,tex,txt,gitcommit setlocal spell
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN PREFERENCES
