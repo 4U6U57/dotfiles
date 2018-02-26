@@ -20,7 +20,7 @@ custom_user_startup() {
     # Lower start brightness
     xbacklight -set 10
     # Start slack client
-    if which slack >/dev/null 2>&1; then slack --startup; fi
+    if command -v slack; then slack --startup; fi
   fi
 }
 [[ $USER == "avalera" ]] && custom_user_startup
