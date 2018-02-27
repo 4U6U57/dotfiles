@@ -1,6 +1,6 @@
 # Config file for dotbot
 # August Valera (@4U6U57)
-# Run ./install to run dotbot
+# Run ./install.sh to run dotbot
 
 - defaults:
     link:
@@ -20,33 +20,30 @@
 
 - shell:
   - ["FILE=git-completion.bash; curl https://raw.githubusercontent.com/git/git/master/contrib/completion/$FILE -o $FILE -z $FILE", Downloading git-completion script]
+  - ["FILE=mvn-completion.bash; curl https://raw.githubusercontent.com/juven/maven-bash-completion/master/bash_completion.bash -o $FILE -z $FILE", Downloading mvn-completion script]
 
 - link:
     ~/bin/crontab-edit: bin/crontab-edit.sh
     ~/bin/duck: bin/duck.sh
     ~/bin/git-open: bin/git-open/git-open
+    ~/bin/git-sortmodules: bin/git-sortmodules.sh
     ~/bin/lazy-keygen: bin/lazy-keygen.sh
     ~/bin/liquidprompt: bin/liquidprompt
     ~/bin/repo-iconify: bin/repo-iconify/repo-iconify.sh
+    ~/bin/ssh-resolve: bin/ssh-resolve.sh
     ~/bin/wsl-open: bin/wsl-open/wsl-open.sh
     ~/.bash_aliases: bash_aliases.sh
     ~/.bash_profile: bash_profile.sh
-    ~/.bashrc: bashrc.bash
+    ~/.bashrc: bashrc.sh
     ~/.bin:
     ~/.completion/git-completion.bash:
+    ~/.completion/mvn-completion.bash:
     ~/.completion/ssh-completion.sh:
-    ~/.crontab:
     ~/.dotfiles: ''
     ~/.editorconfig:
-    ~/.face: face.png
     ~/.gitconfig:
     ~/.liquidpromptrc:
     ~/.liquid.ps1:
     ~/.liquid.theme:
     ~/.repo-iconify:
-    ~/.ssh/config: sshconfig
     ~/.vimrc:
-
-- shell:
-  - ["chmod 700 ~/.ssh/config", Securing SSH config]
-  - ["crontab ~/.crontab", Configuring crontab]

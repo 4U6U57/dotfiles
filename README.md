@@ -1,13 +1,13 @@
 # dotfiles
 
+My personal preference files "dotfiles" for Linux. Feel free to look around, and
+fork it if you want.
+
 [![pipeline
 status](https://gitlab.com/4U6U57/dotfiles/badges/master/pipeline.svg)](https://gitlab.com/4U6U57/dotfiles/commits/master)
 [![gitter chat](https://img.shields.io/gitter/room/4U6U57/dotfiles.svg)](https://gitter.im/4U6U57/dotfiles)
 [![npm
 version](https://img.shields.io/npm/v/@4u6u57/dotfiles.svg)](http://npmjs.com/package/@4u6u57/dotfiles)
-
-My personal preference files "dotfiles" for Linux. Feel free to look around, and
-fork it if you want.
 
 ## Installation
 

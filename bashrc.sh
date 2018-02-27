@@ -60,16 +60,10 @@ shopt -s checkwinsize
 shopt -s cdspell # Autocorrect filenames
 shopt -s nocaseglob # Case insensitive autocorrect
 
-# The following is highly specific to my own personal use
-custom_user_config() {
-  # Ruby for Jekyll
-  if [[ $Jekyll -eq 1 ]]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init -)"
-    export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-  fi
-}
-[[ $USER == "avalera" ]] && custom_user_config
-
 # Adding open-window as a browser for Bash for Windows
 [[ $(uname -r) == *Microsoft ]] && export BROWSER=$BROWSER:wsl-open
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+sourcer "$NVM_DIR/nvm.sh"  # This loads nvm
+sourcer "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

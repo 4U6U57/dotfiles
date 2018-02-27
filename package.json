@@ -3,13 +3,6 @@
   "version": "0.0.2",
   "description": "August Valera's preferences for Linux",
   "main": "install",
-  "scripts": {
-    "install": "./install",
-    "test": "for test in lint; do npm run $test || exit 1; done",
-    "lint": "for lint in lint:md lint:sh; do npm run $lint || exit 1; done",
-    "lint:sh": "shellcheck *.sh bin/*.sh",
-    "lint:md": "markdownlint *.md"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/4U6U57/dotfiles.git"
@@ -26,8 +19,20 @@
     "url": "https://gitlab.com/4U6U57/dotfiles/issues"
   },
   "homepage": "https://gitlab.com/4U6U57/dotfiles#README",
+  "contributors": [],
+  "scripts": {
+    "install": "./install.sh",
+    "test": "for test in lint; do npm run $test || exit 1; done",
+    "lint": "for lint in md sh pkg; do npm run lint:$lint || exit 1; done",
+    "lint:sh": "shellcheck *.sh bin/*.sh",
+    "lint:md": "markdownlint *.md",
+    "lint:pkg": "pjv --recommendations --warnings"
+  },
+  "dependencies": {},
   "devDependencies": {
     "markdownlint-cli": "^0.5.0",
+    "package-json-validator": "^0.6.2",
     "shellcheck": "0.0.8"
-  }
+  },
+  "engines": {}
 }
