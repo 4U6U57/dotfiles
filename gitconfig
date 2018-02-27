@@ -22,3 +22,4 @@
     }; f"
   addall = add -A :/
   commitall = commit -av
+[url "http://example.com/"]

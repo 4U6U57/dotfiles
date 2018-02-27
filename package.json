@@ -22,8 +22,8 @@
   "contributors": [],
   "scripts": {
     "install": "./install.sh",
-    "test": "for test in lint; do npm run $test; done",
-    "lint": "for lint in md sh pkg; do npm run lint:$lint; done",
+    "test": "for test in lint; do npm run $test || exit 1; done",
+    "lint": "for lint in md sh pkg; do npm run lint:$lint || exit 1; done",
     "lint:sh": "shellcheck *.sh bin/*.sh",
     "lint:md": "markdownlint *.md",
     "lint:pkg": "pjv --recommendations --warnings"
