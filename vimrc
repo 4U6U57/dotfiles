@@ -64,9 +64,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL PREFERENCES
 
-" Syntax color-coding
-syntax on
-
 " Shows matching braces and such
 set showmatch
 
@@ -99,6 +96,8 @@ set number
 
 " Sets hotdogs
 set listchars=tab:>-
+
+set whichwrap+=<,>,h,l,[,]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEYBINDINGS
@@ -190,3 +189,6 @@ let g:indentLine_color_term = 236
 
 " table
 let g:table_mode_corner='|'
+
+" Syntax color-coding
+syntax on
