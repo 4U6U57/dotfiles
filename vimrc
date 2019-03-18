@@ -97,6 +97,9 @@ set number
 " Sets hotdogs
 set listchars=tab:>-
 
+" Syntax color-coding
+syntax on
+
 set whichwrap+=<,>,h,l,[,]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -189,6 +192,3 @@ let g:indentLine_color_term = 236
 
 " table
 let g:table_mode_corner='|'
-
-" Syntax color-coding
-syntax on
