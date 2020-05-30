@@ -64,9 +64,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL PREFERENCES
 
-" Syntax color-coding
-syntax on
-
 " Shows matching braces and such
 set showmatch
 
@@ -99,6 +96,11 @@ set number
 
 " Sets hotdogs
 set listchars=tab:>-
+
+" Syntax color-coding
+syntax on
+
+set whichwrap+=<,>,h,l,[,]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEYBINDINGS

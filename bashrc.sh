@@ -67,3 +67,9 @@ shopt -s nocaseglob # Case insensitive autocorrect
 export NVM_DIR="$HOME/.nvm"
 sourcer "$NVM_DIR/nvm.sh"  # This loads nvm
 sourcer "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/avalera/google-cloud-sdk/path.bash.inc' ]; then source '/home/avalera/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/avalera/google-cloud-sdk/completion.bash.inc' ]; then source '/home/avalera/google-cloud-sdk/completion.bash.inc'; fi
