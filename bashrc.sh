@@ -61,7 +61,7 @@ shopt -s cdspell # Autocorrect filenames
 shopt -s nocaseglob # Case insensitive autocorrect
 
 # Adding open-window as a browser for Bash for Windows
-[[ $(uname -r) == *Microsoft ]] && export BROWSER=$BROWSER:wsl-open
+[[ $(uname -r) == *Microsoft ]] && export BROWSER=${BROWSER:wsl-open}
 
 # nvm stuff
 export NVM_DIR="$HOME/.nvm"
