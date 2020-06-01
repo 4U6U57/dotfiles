@@ -30,3 +30,9 @@ alias l='ls -CF'
 
 # Make opening files more like Mac
 alias open='xdg-open'
+
+# GitLab create repo
+if [ -e "$HOME/bin/git-usernames" ]; then
+  source ~/bin/git-usernames
+  [ ! -z "$GITLAB_USERNAME" ] && alias gitlab-init='git push --set-upstream git@gitlab.com:$GITLAB_USERNAME/$(git rev-parse --show-toplevel | xargs basename).git $(git rev-parse --abbrev-ref HEAD)'
+fi
