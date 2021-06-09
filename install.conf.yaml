@@ -45,6 +45,7 @@
     ~/.dotfiles: ''
     ~/.editorconfig:
     ~/.gitconfig:
+    ~/.inputrc:
     ~/.liquidpromptrc:
     ~/.liquid.ps1:
     ~/.liquid.theme:

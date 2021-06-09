@@ -60,8 +60,11 @@ shopt -s checkwinsize
 shopt -s cdspell # Autocorrect filenames
 shopt -s nocaseglob # Case insensitive autocorrect
 
-# Adding open-window as a browser for Bash for Windows
-[[ $(uname -r) == *Microsoft ]] && export BROWSER=${BROWSER:wsl-open}
+# Bash for Windows
+if [[ $(uname -r) == *Microsoft ]]; then
+  # Add wsl-open as browser
+  export BROWSER=${BROWSER:wsl-open}
+fi
 
 # nvm stuff
 export NVM_DIR="$HOME/.nvm"
@@ -73,3 +76,6 @@ if [ -f '/home/avalera/google-cloud-sdk/path.bash.inc' ]; then source '/home/ava
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/avalera/google-cloud-sdk/completion.bash.inc' ]; then source '/home/avalera/google-cloud-sdk/completion.bash.inc'; fi
+
+# added by pipx (https://github.com/pipxproject/pipx)
+export PATH="/home/avalera/.local/bin:$PATH"

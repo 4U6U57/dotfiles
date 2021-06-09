@@ -5,7 +5,7 @@
 
 [user]
   name = August Valera
-  email = avalera@egnyte.com
+  email = 4U6U57@gmail.com
 [push]
   default = matching
 [color]
@@ -25,3 +25,5 @@
 [url "http://example.com/"]
 [core]
 	autocrlf = input
+[init]
+	defaultBranch = main
