@@ -35,6 +35,7 @@
     ~/bin/ssh-resolve: bin/ssh-resolve.sh
     ~/bin/tsv-view: bin/tsv-view.sh
     ~/bin/wsl-open: bin/wsl-open/wsl-open.sh
+    ~/bin/youtube-mp3: bin/youtube-mp3.sh
     ~/.bash_aliases: bash_aliases.sh
     ~/.bash_profile: bash_profile.sh
     ~/.bashrc: bashrc.sh
